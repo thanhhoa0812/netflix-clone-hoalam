@@ -1,23 +1,18 @@
+import { getTVSeries, getCategory } from "@/lib/tmdb";
 import MovieList from "@/components/MovieList";
 
 export default async function SeriesPage() {
-  const res = await fetch("https://api.themoviedb.org/3/tv/popular", {
-    headers: {
-      Authorization: `Bearer ${process.env.TMDB_API_KEY}`,
-    },
-    next: { revalidate: 3600 },
-  });
-
-  if (!res.ok) {
-    return <h1 className="text-red-500">Failed to load series</h1>;
-  }
-
-  const series = await res.json();
+    //const popular = await getTVSeries("popular");
+    const upcoming = await getCategory("upcoming");
+    const top_rated = await getCategory("top_rated");
 
   return (
-    <div className="space-y-10 p-6">
-      <h1 className="text-3xl font-bold">Popular TV Series</h1>
-      <MovieList title="Popular Series" movies={series.results} />
-    </div>
-  );
+      <div className="space-y-10 p-6">
+        <h1 className="px-4 md:px-10 text-3xl font-bold">TV Series</h1>
+        {/* <MovieList title="Popular Movies" movies={popular.results} />
+        <MovieList title="Airing Today Movies" movies={airing_today.results} /> */}
+        <MovieList title="Airing Today Movies" movies={top_rated.results} />
+        <MovieList title="Popular Movies" movies={upcoming.results} />
+      </div>
+    );
 }

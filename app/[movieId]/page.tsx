@@ -8,13 +8,6 @@ export const revalidate = 60 * 60 * 24; // daily
 
 type PageProps = { params: { movieId: string } };
 
-// export async function generateMetadata({
-//   params,
-// }: PageProps): Promise<Metadata> {
-//   const movie = await getMovieById(params.movieId);
-//   return { title: `${movie.title} – Netflix` };
-// }
-
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {

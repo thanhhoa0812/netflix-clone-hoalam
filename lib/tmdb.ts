@@ -32,7 +32,7 @@ async function tmdb<T>(path: string, init?: RequestInit): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-export async function getCategory(category: 'popular' | 'now_playing' | 'top_rated'): Promise<TMDbMovieListResponse> {
+export async function getCategory(category: 'popular' | 'now_playing' | 'top_rated' | 'upcoming'): Promise<TMDbMovieListResponse> {
   return tmdb(`/movie/${category}`);
 }
 
@@ -46,4 +46,12 @@ export async function getMovieVideos(id: string | number): Promise<TMDbVideoList
 
 export async function getRelatedMovies(id: string | number): Promise<TMDbMovieListResponse> {
   return tmdb(`/movie/${id}/recommendations`);
+}
+
+export async function getTVSeries(series: 'popular' | 'airing_today' ): Promise<TMDbMovieListResponse> {
+  return tmdb(`/tv/${series}`);
+}
+
+export async function getPerson(person: 'popular' ): Promise<TMDbMovieListResponse> {
+  return tmdb(`/person/${person}`);
 }
