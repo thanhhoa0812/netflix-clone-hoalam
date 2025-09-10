@@ -2,7 +2,7 @@ import { getCategory } from "@/lib/tmdb";
 import HeroSection from "@/components/HeroSection";
 import MovieList from "@/components/MovieList";
 
-export const revalidate = 60 * 60;
+export const revalidate = 3600;
 
 export default async function HomePage() {
   const [popular, nowPlaying, topRated] = await Promise.all([

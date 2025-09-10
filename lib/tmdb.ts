@@ -22,7 +22,7 @@ async function tmdb<T>(path: string, init?: RequestInit): Promise<T> {
       'Content-Type': 'application/json;charset=utf-8'
     },
     // Cache-friendly defaults; callers can override using Next.js fetch options
-    next: { revalidate: 60 * 60 }
+    next: { revalidate: 3600 }
   });
 
   if (!res.ok) {

@@ -6,7 +6,7 @@ const nextConfig = {
     ]
   },
   experimental: {
-    turbo: false 
+    typedRoutes: true
   }
 };
 export default nextConfig;

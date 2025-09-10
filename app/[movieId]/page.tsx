@@ -4,9 +4,8 @@ import TrailerSection from "@/components/TrailerSection";
 import RelatedMovies from "@/components/RelatedMovies";
 import type { Metadata } from "next";
 
-export const revalidate = 60 * 60 * 24; // daily
+export const revalidate = 86400; // daily
 
-//type PageProps = { params: { movieId: string } };
 
 export async function generateMetadata({
   params,
