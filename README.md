@@ -27,6 +27,11 @@ Open http://localhost:3000
 - Click a poster to open the **Movie Detail** page
 - **Trailer** embed (YouTube) and **Related movies**
 - Responsive and image-optimized
+- Click **More info** to open the **Movie Detail** page
+- Click **Browse** Will roll on Netflix Popular on the top of the page
+- Click **Home** Return to the main page
+- Click **Movies** Will show page include  **Popular Movies / Upcoming Movies / Top Rated Movies** rows
+- Click **Series** Will show page include  **Airing Today Movies / Popular Movies** rows
 
 ## Tech
 - **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**
