@@ -28,19 +28,18 @@ export default function MovieCard({ movie }: { movie: TMDbMovie }) {
             sizes="(max-width: 768px) 33vw, (max-width: 1200px) 20vw, 14vw"
           />
         )}
-      </div>
-      <div className="mt-2 space-y-1">
-        <p className="text-sm md:text-base font-medium line-clamp-1">
-          {movie.title}
-        </p>
         <div
-          className={`-top-2 -left-2 ${getVoteColor(
+          className={`absolute top-0 left-0 ${getVoteColor(
             votePercent
           )} text-white text-xs font-bold rounded-full w-10 h-7 flex items-center justify-center shadow-md`}
         >
           {votePercent}%
         </div>
-        
+      </div>
+      <div className="mt-2 space-y-1">
+        <p className="text-sm md:text-base font-medium whitespace-normal break-words">
+          {movie.title}
+        </p>
       </div>
     </Link>
   );

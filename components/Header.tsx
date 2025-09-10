@@ -13,7 +13,7 @@ export default function Header() {
         >
           <span className="text-brand-red">Net</span>flix Clone
         </Link>
-        <nav className="hidden sm:flex gap-6 text-sm text-white/80">
+        <nav className="flex gap-6 text-sm text-white/80">
           {["/", "/movies", "/series"].map((p) => (
             <Link
               key={p}
