@@ -6,3 +6,15 @@ html, body, :root { height: 100%; }
 body { background-color: var(--color-background); color: var(--color-foreground); }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* styles/globals.css */
+::-webkit-scrollbar {
+  height: 6px; 
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
