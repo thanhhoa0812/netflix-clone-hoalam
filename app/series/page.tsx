@@ -1,4 +1,4 @@
-import { getTVSeries, getCategory } from "@/lib/tmdb";
+import { getCategory } from "@/lib/tmdb";
 import MovieList from "@/components/MovieList";
 
 export default async function SeriesPage() {

@@ -45,8 +45,3 @@ Open http://localhost:3000
 
 ## Project Structure
 See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) for component and data flow details.
-
-## Submission
-- Create a new GitHub repository and push this code.
-- Ensure the **README** and **docs/ARCHITECTURE.md** are present.
-- Provide your Git link in your submission.
