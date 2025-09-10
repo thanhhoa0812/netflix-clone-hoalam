@@ -6,17 +6,21 @@ import type { Metadata } from "next";
 
 export const revalidate = 60 * 60 * 24; // daily
 
-type PageProps = { params: { movieId: string } };
+//type PageProps = { params: { movieId: string } };
 
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
+}: MoviePageProps): Promise<Metadata> {
   const { movieId } = await params;
   const movie = await getMovieById(movieId);
   return { title: `${movie.title} – Netflix` };
 }
 
-export default async function MoviePage({ params }: PageProps) {
+interface MoviePageProps {
+  params: Promise<{ movieId: string }>;
+}
+
+export default async function MoviePage({ params }: MoviePageProps) {
   const { movieId } = await params;
   const movie = await getMovieById(movieId);
   const videos = await getMovieVideos(movieId);
