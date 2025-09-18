@@ -18,11 +18,11 @@ export default function MovieDetail({ movie }: { movie: TMDbMovieDetail }) {
         )}
         <div className="space-y-3">
           <h1 className="text-3xl md:text-4xl font-extrabold">{movie.title}</h1>
-          <p className="text-white/80">{movie.overview}</p>
-          <div className="text-sm text-white/70 flex flex-wrap gap-x-6 gap-y-2">
+          <p className="text-black/80 font-extrabold">{movie.overview}</p>
+          <div className="text-sm text-black/70 flex flex-wrap gap-x-6 gap-y-2 font-extrabold">
             <span>Release: {movie.release_date}</span>
             <span>Runtime: {movie.runtime}m</span>
-            <span>Rating: ⭐⭐ {movie.vote_average?.toFixed(1)}</span>
+            <span>Rating: {movie.vote_average?.toFixed(1)}</span>
             <span>Genres: {movie.genres?.map((g) => g.name).join(', ') || '—'}</span>
           </div>
         </div>

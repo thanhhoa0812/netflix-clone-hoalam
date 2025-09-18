@@ -26,12 +26,11 @@ export default function HeroSection({ movie }: { movie?: TMDbMovie }) {
         <h1 className="text-3xl md:text-5xl font-extrabold drop-shadow-lg">
           {movie.title}
         </h1>
-        <p className="hidden md:block text-white/80 line-clamp-3">
+        <p className="hidden md:block text-black/80 font-extrabold line-clamp-3">
           {movie.overview}
         </p>
         <div className="flex gap-3">
           <Link
-           // href={{ pathname: `/${movie.id}` }}
             href={`/${movie.id}`}
             className="bg-white text-black rounded-md px-4 py-2 font-semibold hover:bg-white/90"
           >
