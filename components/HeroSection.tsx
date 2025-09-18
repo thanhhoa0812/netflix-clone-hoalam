@@ -38,7 +38,7 @@ export default function HeroSection({ movie }: { movie?: TMDbMovie }) {
           </Link>
           <a
             href="#rows"
-            className="bg-white/20 text-white rounded-md px-4 py-2 font-medium hover:bg-white/30"
+            className="bg-white text-black rounded-md px-4 py-2 font-medium hover:bg-white/30"
           >
             Browse
           </a>
